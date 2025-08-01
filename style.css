@@ -9,9 +9,16 @@
     padding: 0;
 }
 
+
+
+:root {
+    --primary-clr: oklch(100% 0.00011 271.152);
+    --bg-clr: oklch(92.876% 0.01272 255.643);
+    --accent-clr: oklch(63.015% 0.13873 240.368);
+}
+
 .container {
     min-height: 100vh;
-    margin: 15px;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
@@ -22,9 +29,8 @@
 }
 
 .header {
-    /* grid-area: 1/2/2/3; */
     grid-area: header;
-    background: green;
+    background: var(--primary-clr);
 }
 
 aside {
