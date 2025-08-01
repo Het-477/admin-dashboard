@@ -1,0 +1,13 @@
+.search-bar {
+    border: 2px solid black;
+}
+
+.header .search-bar img,
+.header .search-bar input{
+    height: 4vh;
+}
+
+.header .search-bar input {
+    width: 50%;
+    border-radius: 0.8rem;
+}
