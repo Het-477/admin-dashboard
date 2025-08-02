@@ -1,6 +1,6 @@
 .header {
     display: grid;
-    grid-template-columns: 5fr 1fr 3fr ;
+    grid-template-columns: 5fr 0.5fr 2fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
         "search-bar notifications user-info";
@@ -8,7 +8,7 @@
 
 .search-bar {
     grid-area: search-bar;
-    /* border: 2px solid black; */    
+    /* border: 2px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,11 +23,11 @@
 }
 
 .header .icon {
-    height: 3.5vh;  
+    height: 3.5vh;
 }
 
 .header .search-bar input {
-    width: 100%;
+    width: 90%;
     border-radius: 0.8rem;
     font-size: 1rem;
     padding: 0.4rem;
@@ -43,11 +43,28 @@
 .notifications {
     grid-area: notifications;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .user-info {
-        grid-area: user-info;
+    grid-area: user-info;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.8rem;
 
+    padding: 0.8rem 0.8rem 0.8rem 1.8rem;
+    /* border: 2px solid black; */
+}
+
+.user-info .profile-pic img {
+    height: 3.1rem;
+    width: 3.1vw;
+    border-radius: 100px;
+}
+
+.user-info .profile-name {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
