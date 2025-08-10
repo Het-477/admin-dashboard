@@ -3,7 +3,8 @@
     grid-template-columns: 5fr 0.5fr 2fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-        "search-bar notifications user-info";
+        "search-bar notifications user-info"
+        "username-with-info options options";
 }
 
 .search-bar {
@@ -67,4 +68,41 @@
 .user-info .profile-name {
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.username-with-info {
+    grid-area: username-with-info;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+
+    padding: 0.8rem 2.5rem;
+    gap: 1rem;
+}
+
+.username-with-info .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & .profile-user-name {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    & span {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+}
+
+.username-with-info .profile-image img {
+    height: 4.1rem;
+    width: 4.1vw;
+    border-radius: 100px;
+}
+
+.options { 
+        grid-area: options;
+        border: 2px solid magenta;
 }
