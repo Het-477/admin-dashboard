@@ -7,9 +7,10 @@
         "username-with-info options options";
 }
 
+
+/* Searchbar styling  */
 .search-bar {
     grid-area: search-bar;
-    /* border: 2px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +19,6 @@
     padding: 0.8rem;
 }
 
-/* .header .search-bar img, */
 .header .search-bar input {
     height: 4vh;
 }
@@ -48,6 +48,7 @@
     align-items: center;
 }
 
+/* left user info and profile pic styling  */
 .user-info {
     grid-area: user-info;
     display: flex;
@@ -56,13 +57,22 @@
     gap: 1.8rem;
 
     padding: 0.8rem 0.8rem 0.8rem 1.8rem;
-    /* border: 2px solid black; */
+}
+
+.user-info .profile-pic {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    /* Hide any overflow */
+    border-radius: 50%;
 }
 
 .user-info .profile-pic img {
-    height: 3.1rem;
-    width: 3.1vw;
-    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    display: block;
+    /* Remove any inline spacing */
 }
 
 .user-info .profile-name {
@@ -95,25 +105,39 @@
     }
 }
 
+/* lower user info styling */
+.username-with-info .profile-image {
+    width: 80px;
+    /* Set desired size */
+    height: 80px;
+    /* Same as width to make it square */
+    overflow: hidden;
+    /* Hide any overflow */
+    border-radius: 50%;
+}
+
 .username-with-info .profile-image img {
-    height: 4.1rem;
-    width: 4.1vw;
-    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This will crop the image to fill the container while maintaining aspect ratio */
+    display: block;
+    /* Remove any inline spacing */
 }
 
-.options { 
-        grid-area: options;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2.8rem;
+.options {
+    grid-area: options;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.8rem;
 }
 
-.options > button {
+.options>button {
     font-size: 1.2rem;
     padding: 0.28rem 1.2rem;
     border-radius: 16px;
     border-style: none;
-    background-color:var(--accent-clr);
+    background-color: var(--accent-clr);
     color: var(--primary-clr);
 }
